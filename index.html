@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Tech Test</title>
+        <link rel="stylesheet" href="./cart.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+        <script src="./cart.js"></script>
+
+    </head>
+    <body>
+        <div class="cart-drawer" x-data>
+            <div class="cart-drawer-header">
+              <h2 class="title">Cart</h2>
+            </div>
+          
+            <div class="cart-drawer-content">
+              <template x-for="lineItem in $store.cart.items" :key="lineItem.id">
+                <div class="line-item">
+                  <div class="image">
+                    <img :src="lineItem.image" :alt="lineItem.title" width="100" height="100">
+                  </div>
+                  <div class="info">
+                      <div class="title">
+                        <span x-text="lineItem.title"></span>
+                      </div>
+                      <div class="price">
+                        <span
+                          x-text="`£${(lineItem.price).toFixed(2)}`"
+                        ></span>
+                      </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+
+            <div class="cart-drawer-footer">
+                <div class="total">
+                    <span x-text="`Total: £${$store.cart.total.toFixed(2)}`"></span>
+                </div>
+            </div>
+          </div>
+    </body>
+</html>
