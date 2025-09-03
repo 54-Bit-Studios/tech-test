@@ -15,7 +15,15 @@ document.addEventListener('alpine:init', () => {
             price: 33.99,
             image: 'https://diginrecords.com/cdn/shop/files/b8ab2500-0fc5-4b1e-a5ec-ae2c66ce6944_400x400.jpg?v=1739566310',
             quantity: 1,
-        }],
+        },
+        {
+            id: 3,
+            title: 'Adele - 25',
+            price: 19.99,
+            image: 'https://diginrecords.com/cdn/shop/files/31520f88-0a64-49f8-806e-b0f120ce4d98.jpg?v=17395608600',
+            quantity: 1,
+        },
+    ],
 
         total: 0,
 

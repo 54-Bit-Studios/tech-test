@@ -8,11 +8,11 @@
     </head>
     <body>
         <div class="cart-drawer" x-data>
-            <div class="cart-drawer-header">
+            <div class="cart-header">
               <h2 class="title">Cart</h2>
             </div>
           
-            <div class="cart-drawer-content">
+            <div class="cart-content">
               <template x-for="lineItem in $store.cart.items" :key="lineItem.id">
                 <div class="line-item">
                   <div class="image">
